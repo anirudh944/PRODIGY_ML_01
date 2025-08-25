@@ -26,6 +26,35 @@ The dataset used is from Kaggle’s competition:
 - Scikit-learn (Linear Regression, evaluation metrics)  
 - Matplotlib (visualization)  
 
+## Results:-
+Model Coefficients:-
+GrLivArea (Square Footage): +104.03
+BedroomAbvGr (Bedrooms): -26,655.17
+FullBath (Bathrooms): +30,014.32
+Intercept: 52,261.75
+R² Score: 0.6341 (~63% of price variation explained)
+RMSE: 52,975.72 (average prediction error ≈ ₹53K)
+
+## Sample Predictions:-
+Actual Price	Predicted Price
+154,500	       113,410.67
+325,000	       305,081.88
+115,000	       135,904.79
+159,000	       205,424.68
+315,500	       227,502.68
+
+## Visualization:-
+~ Scatter plot of Actual vs Predicted prices:
+~ Red dashed line = perfect prediction
+~ Blue dots = predicted results
+~ Most points are near the line, but higher-priced houses are underestimated
+
+## Conclusion:-
+~ Square footage strongly influences house prices.
+~ Bedrooms have a slightly negative correlation (possibly due to redundancy with square footage).
+~ Bathrooms increase value significantly.
+
+The model is simple but explains ~63% of price variation.
 ---
 
 ## 📜 Code
@@ -74,45 +103,3 @@ plt.xlabel("Actual Prices")
 plt.ylabel("Predicted Prices")
 plt.title("Actual vs Predicted House Prices")
 plt.show()
-
-## Results:-
-Model Coefficients:
-
-GrLivArea (Square Footage): +104.03
-
-BedroomAbvGr (Bedrooms): -26,655.17
-
-FullBath (Bathrooms): +30,014.32
-
-Intercept: 52,261.75
-
-R² Score: 0.6341 (~63% of price variation explained)
-
-RMSE: 52,975.72 (average prediction error ≈ ₹53K)
-
-## Sample Predictions:-
-Actual Price	Predicted Price
-154,500	       113,410.67
-325,000	       305,081.88
-115,000	       135,904.79
-159,000	       205,424.68
-315,500	       227,502.68
-
-
-## Visualization:-
-~ Scatter plot of Actual vs Predicted prices:
-
-~ Red dashed line = perfect prediction
-
-~ Blue dots = predicted results
-
-~ Most points are near the line, but higher-priced houses are underestimated
-
-## Conclusion:-
-~ Square footage strongly influences house prices.
-
-~ Bedrooms have a slightly negative correlation (possibly due to redundancy with square footage).
-
-~ Bathrooms increase value significantly.
-
-The model is simple but explains ~63% of price variation.
